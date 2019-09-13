@@ -30,5 +30,11 @@ class String
   #   self.squeeze.split(/[.?!]/).count
   # end
   
-  
+  def count_sentences    
+    if self.empty?       
+      return 0     
+    else       
+        self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.count     binding.pry     
+    end 
+  end
 end
